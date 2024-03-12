@@ -10,4 +10,3 @@ def count_words(string):
         else:
             res[word] = 1
     return res
-print(count_words("A man, a plan, a canal -- Panama"))
