@@ -16,13 +16,13 @@ class Dessert:
         self.calories = calories
 
     def is_healthy(self):
-        if isinstance(self.calories, int) and self.calories < 200:
+        if isinstance(self.calories, int | float) and self.calories < 200.0:
             return True
         else:
             return False
 
     def is_delicious(self):
-        if self.is_healthy():
+        if isinstance(self, Dessert):
             return True
         else:
             return False
@@ -40,7 +40,7 @@ class JellyBean(Dessert):
         self.flavor = flavor
 
     def is_delicious(self):
-        if self.flavor == "black licorice":
+        if super().is_healthy() or self.flavor == "black licorice":
             return False
         else:
             return True
