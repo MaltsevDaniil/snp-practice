@@ -22,8 +22,7 @@ class Dessert:
             return False
 
     def is_delicious(self):
-        if self.is_healthy():
+        if isinstance(self, Dessert):
             return True
         else:
             return False
-
