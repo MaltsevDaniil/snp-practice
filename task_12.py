@@ -27,7 +27,6 @@ class Dessert:
         else:
             return False
 
-
 class JellyBean(Dessert):
     def __init__(self, name=None, calories=None):
         super().__init__(name, calories)
@@ -44,3 +43,4 @@ class JellyBean(Dessert):
             return False
         else:
             return True
+
