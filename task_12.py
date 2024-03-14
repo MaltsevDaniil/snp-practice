@@ -16,7 +16,7 @@ class Dessert:
         self.calories = calories
 
     def is_healthy(self):
-        if self.calories is not None and self.calories < 200:
+        if isinstance(self.calories, int) and self.calories < 200:
             return True
         else:
             return False
@@ -31,6 +31,7 @@ class Dessert:
 class JellyBean(Dessert):
     def __init__(self, name=None, calories=None):
         super().__init__(name, calories)
+        self.flavor = None
 
     def get_flavor(self):
         return self.flavor
